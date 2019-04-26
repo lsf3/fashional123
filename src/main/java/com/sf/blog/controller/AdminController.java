@@ -13,7 +13,7 @@ import com.sf.blog.vo.Menu;
 
 /**
  * 用户控制器.
- * 
+ *
  * @author <a href="https://waylau.com">Way Lau</a>
  * @date 2017年2月26日
  */
@@ -21,17 +21,18 @@ import com.sf.blog.vo.Menu;
 @RequestMapping("/admins")
 public class AdminController {
 
-	/**
-	 * 获取后台管理主页面
-	 * @return
-	 */
-	@GetMapping
-	public ModelAndView listUsers(Model model) {
-		List<Menu> list = new ArrayList<>();
-		list.add(new Menu("用户管理", "/users"));
-		model.addAttribute("list", list);
-		return new ModelAndView("/admins/index", "model", model);
-	}
- 
-	 
+    /**
+     * 获取后台管理主页面
+     *
+     * @return
+     */
+    @GetMapping
+    public ModelAndView listUsers(Model model) {
+        List<Menu> list = new ArrayList<>();
+        list.add(new Menu("用户管理", "/users"));
+        model.addAttribute("list", list);
+        return new ModelAndView("/admins/index", "model", model);
+    }
+
+
 }
